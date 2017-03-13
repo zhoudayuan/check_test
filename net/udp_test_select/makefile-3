@@ -1,0 +1,21 @@
+CFLAGS=  -g -Wall
+LDFLAGS= -lpthread
+CC=gcc
+Src=$(wildcard *.c)
+Target=$(patsubst %.c, %, $(Src))
+
+
+
+%.o:%.c
+	$(CC) $(CFLAGS) -c  $(LDFLAGS) $<   -o $@ 
+
+%:%.o
+	$(CC) $(CFLAGS)  $(LDFLAGS) $<   -o $@ 
+
+all: $(Target)
+
+
+clean:
+	@echo $(Src)
+	@echo $(Target)
+	-rm -f $(Target)

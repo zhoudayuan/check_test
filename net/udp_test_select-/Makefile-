@@ -1,0 +1,18 @@
+INCLUDE=.
+CFLAGS=-O -Wall
+CC=gcc
+
+
+EXECUTABLES =  rcv_select_test
+
+
+
+%o:%c
+	$(CC) -I$(INCLUDE) $(CFLAGS)  $< -o $@  -lpthread
+
+all: $(EXECUTABLES)
+
+
+clean:
+	-rm $(EXECUTABLES)
+

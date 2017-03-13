@@ -1,0 +1,3 @@
+The fclose( ) function closes the file associated with a given FILE pointer, and releases the
+memory occupied by its I/O buffer. If the file was opened for writing, fclose( ) flushes the
+contents of the file buffer to the file.

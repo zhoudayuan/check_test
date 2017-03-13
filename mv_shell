@@ -1,0 +1,11 @@
+#!/bin/sh
+
+OP_PATH=`pwd`
+DST_DIR=checkgit
+EX_FILE=checkgit
+
+cd  ${OP_PATH}
+#mpp=`ls|grep -v  a_txt | grep -v b_txt | grep -v mv_test |  grep -v dir`
+mpp=`ls | grep -v ${EX_FILE}`
+mv  $mpp `pwd`/${DST_DIR}
+ls
