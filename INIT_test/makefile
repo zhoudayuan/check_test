@@ -8,7 +8,8 @@ EXECUTABLES = INIT_test \
 				fopen_test \
 				inet_aton_test \
 				gets_test \
-				HexToStr_test
+				HexToStr_test\
+				GetSmsData
 
 
 %o:%c
